@@ -1,88 +1,73 @@
 import type { RunOptions } from '../workflows/csvlint.js'
 import { run as _run } from '../workflows/csvlint.js'
 
-const run = (options: RunOptions) => _run({ silent: true, ...options })
+const run = (content: string, options: RunOptions = {}) =>
+  _run(content, { silent: true, ...options })
 
 describe('rules', () => {
-  test('valid example', async () => {
-    await expect(
-      run({
-        glossary: `
+  test('valid example', () => {
+    expect(
+      run(`
 en,ko
 platform,플랫폼
-engineering,엔지니어링`,
-      }),
-    ).resolves.toBe(true)
+engineering,엔지니어링`),
+    ).toBe(true)
   })
 
-  test('titles', async () => {
-    await expect(
-      run({
-        glossary: `
+  test('titles', () => {
+    expect(
+      run(`
 en,kor
 platform,플랫폼
-engineering,엔지니어링`,
-      }),
-    ).resolves.toBe(false)
+engineering,엔지니어링`),
+    ).toBe(false)
   })
 
-  test('preceding-whitespace', async () => {
-    await expect(
-      run({
-        glossary: `
+  test('preceding-whitespace', () => {
+    expect(
+      run(`
 en,ko
 platform, 플랫폼
-engineering,엔지니어링`,
-      }),
-    ).resolves.toBe(false)
+engineering,엔지니어링`),
+    ).toBe(false)
 
-    await expect(
-      run({
-        glossary: `
+    expect(
+      run(`
 en,ko
 platform,플랫폼
- engineering,엔지니어링`,
-      }),
-    ).resolves.toBe(false)
+ engineering,엔지니어링`),
+    ).toBe(false)
   })
 
-  test('trailing-whitespace', async () => {
-    await expect(
-      run({
-        glossary: `
+  test('trailing-whitespace', () => {
+    expect(
+      run(`
 en,ko
 platform ,플랫폼
-engineering,엔지니어링`,
-      }),
-    ).resolves.toBe(false)
+engineering,엔지니어링`),
+    ).toBe(false)
 
-    await expect(
-      run({
-        glossary: `
+    expect(
+      run(`
 en,kor
 platform,플랫폼
-engineering,엔지니어링 `,
-      }),
-    ).resolves.toBe(false)
+engineering,엔지니어링 `),
+    ).toBe(false)
   })
 
-  test('too-many-columns', async () => {
-    await expect(
-      run({
-        glossary: `
+  test('too-many-columns', () => {
+    expect(
+      run(`
 en,ko,foo
 platform,플랫폼
-engineering,엔지니어링`,
-      }),
-    ).resolves.toBe(false)
+engineering,엔지니어링`),
+    ).toBe(false)
 
-    await expect(
-      run({
-        glossary: `
+    expect(
+      run(`
 en,kor
 platform,플랫폼,
-engineering,엔지니어링`,
-      }),
-    ).resolves.toBe(false)
+engineering,엔지니어링`),
+    ).toBe(false)
   })
 })
