@@ -1,0 +1,6 @@
+{
+  "extends": "@jjangga0214/markdownlint-config",
+  "MD026": false,
+  "MD040": false,
+  "single-h1": false
+}
