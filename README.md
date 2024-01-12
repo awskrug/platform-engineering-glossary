@@ -25,7 +25,7 @@ pnpm install
 
 ## 번역 아티클 작성 예시
 
-다음과 같이 alice 가 *`foo.md`*, *`bar.txt`* 를 작성하고, bob 이 *`qux.smi`* 를 작성하기로 했다고 가정해보겠습니다.
+alice 가 *`foo.md`*, *`bar.txt`* 를 작성하고, bob 이 *`qux.smi`* 를 작성하기로 했다고 가정해보겠습니다.
 
 ```
 platform-engineering-glossary
@@ -72,11 +72,11 @@ platform-engineering-glossary
 │   ├── alice
 │   │   ├── foo.md
 │   │   ├── foo.rendered.md
-│   │   ├── bar.md
-│   │   └── bar.rendered.md
+│   │   ├── bar.txt
+│   │   └── bar.rendered.txt
 │   └── bob
 │       ├── qux.md
-│       └── qux.rendered.md
+│       └── qux.rendered.smi
 └── glossary.csv
 ```
 
