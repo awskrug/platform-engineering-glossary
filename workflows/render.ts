@@ -36,7 +36,7 @@ async function render({ filename, glossary }: RenderOptions): Promise<void> {
 // When the module is imported, do nothing.
 if (process.argv[1] === filename(import.meta)) {
   const dir = dirname(import.meta)
-  const markdowns = await globby([
+  const articles = await globby([
     path.resolve(
       dir,
       '../articles/*/**/*.{md,srt,srt,sbv,sub,lrc,cap,smi,sami,rt,vtt,ttml,dfxp,txt}',
@@ -50,5 +50,5 @@ if (process.argv[1] === filename(import.meta)) {
     }),
   )
 
-  await Promise.all(markdowns.map((filename) => render({ filename, glossary })))
+  await Promise.all(articles.map((filename) => render({ filename, glossary })))
 }

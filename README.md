@@ -13,8 +13,7 @@ Platform Engineering 과 관련된 정보를 번역하는데 사용되는 용어
 반면에, 용어집을 동적으로 사용하고자 한다면 환경을 세팅해주세요.
 
 ```bash
-# 최신 node.js(v14.19 / v16.9 이상) 가 설치된 환경이라면
-# corepack 을 활성화 할 수 있습니다.
+# 최신 node.js(v14.19 / v16.9 이상) 가 설치된 환경이라면 corepack 을 활성화 할 수 있습니다.
 # 단, 필수 사항은 아닙니다.
 corepack enable
 
@@ -66,18 +65,18 @@ pnpm render
 
 아티클에 glossary 가 삽입되어 렌더링된 파일이 생성됩니다.
 
-```
-platform-engineering-glossary
-├── articles
-│   ├── alice
-│   │   ├── foo.md
-│   │   ├── foo.rendered.md
-│   │   ├── bar.txt
-│   │   └── bar.rendered.txt
-│   └── bob
-│       ├── qux.smi
-│       └── qux.rendered.smi
-└── glossary.csv
+```diff
+  platform-engineering-glossary
+  ├── articles
+  │   ├── alice
+  │   │   ├── foo.md
++ │   │   ├── foo.rendered.md
+  │   │   ├── bar.txt
++ │   │   └── bar.rendered.txt
+  │   └── bob
+  │       ├── qux.smi
++ │       └── qux.rendered.smi
+  └── glossary.csv
 ```
 
 **articles/alice/foo.rendered.md**:
