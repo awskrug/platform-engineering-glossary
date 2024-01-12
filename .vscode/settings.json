@@ -3,5 +3,7 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "editor.renderFinalNewline": "on",
-  "eslint.experimental.useFlatConfig": true
+  "eslint.experimental.useFlatConfig": true,
+  "files.autoSaveDelay": 10,
+
 }
