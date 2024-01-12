@@ -39,7 +39,7 @@ if (process.argv[1] === filename(import.meta)) {
   const markdowns = await globby([
     path.resolve(
       dir,
-      '../articles/*/**/*.{md,srt,srt,sbv,sub,lrc,cap,smi,sami,vtt,txt}',
+      '../articles/*/**/*.{md,srt,srt,sbv,sub,lrc,cap,smi,sami,rt,vtt,ttml,dfxp,txt}',
     ),
     '!**/*.rendered.*',
   ])
