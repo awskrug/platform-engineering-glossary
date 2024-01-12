@@ -75,7 +75,7 @@ platform-engineering-glossary
 │   │   ├── bar.txt
 │   │   └── bar.rendered.txt
 │   └── bob
-│       ├── qux.md
+│       ├── qux.smi
 │       └── qux.rendered.smi
 └── glossary.csv
 ```
