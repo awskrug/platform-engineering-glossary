@@ -149,21 +149,22 @@ export default configure({
         const sideEffects = affectedArticles
           .map((f) => toOriginalFilename(f))
           .filter((file) => !changedFiles.includes(file))
-        const pr = github.context.issue
         const octokit = new Octokit()
         const branch = await git.branch()
+        const options = {
+          ...github.context.repo,
+          issue_number: github.context.payload.pull_request!.number,
+        }
         // eslint-disable-next-line unicorn/prefer-ternary
         if (sideEffects.length === 0) {
           await octokit.issues.createComment({
-            ...pr,
-            issue_number: pr.number,
+            ...options,
             body: `✅ 사이드 이펙트가 감지되지 않았습니다.
 *(PR 에 포함되지 않은 파일들의 렌더링에 영향이 없습니다.)*`,
           })
         } else {
           await octokit.issues.createComment({
-            ...pr,
-            issue_number: pr.number,
+            ...options,
             body: `⚠️ 사이드 이펙트가 감지되었습니다.
 아래의 파일들은 PR 에 포함되지 않지만 렌더링에 영향을 받습니다.
 
