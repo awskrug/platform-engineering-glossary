@@ -1,0 +1,75 @@
+name: Lint, Test, and Publish
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  main:
+    permissions:
+      contents: write # Let the bot push to main
+      issues: write
+      pull-requests: write # Let the bot comment on PR
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # For haetae
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: false # For cache
+
+      # pnpm should be installed before the setup-node action. REF: https://github.com/actions/setup-node/issues/530
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm eslint .
+
+      - name: Lint markdown
+        run: pnpm markdownlint .
+
+      - name: Lint glossary
+        run: pnpm lint:csv
+
+      - name: Lint config
+        run: pnpm lint:config
+
+      - name: Test
+        run: pnpm test
+
+      - name: Cache haetae
+        uses: actions/cache@v3
+        with:
+          path: .haetae
+          key: main-haetae-${{ github.ref }}-${{ github.sha }}
+          restore-keys: |
+            main-haetae-${{ github.ref }}-
+            main-haetae-
+
+      - name: haetae comment
+        if: github.ref == 'refs/heads/main' || github.event_name == 'pull_request'
+        run: pnpm haetae comment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: haetae publish
+        if: github.ref == 'refs/heads/main' # Only for push to main, not PR
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          pnpm haetae publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JJANGGA0214_DEVTO_API_KEY: ${{ secrets.JJANGGA0214_DEVTO_API_KEY }}

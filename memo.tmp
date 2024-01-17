@@ -1,0 +1,17 @@
+lint:config
+  - ci
+  - script
+
+tmp0200
+  - schema file
+  - config file
+
+articles
+  - demo
+
+haetae
+  - env.version
+  - env branch assertion
+
+ci
+  add check if push for haetae publish
