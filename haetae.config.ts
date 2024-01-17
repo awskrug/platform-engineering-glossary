@@ -152,10 +152,8 @@ export default configure({
           .map((f) => toOriginalFilename(f))
           .filter((file) => !changedFiles.includes(file))
         console.log('sideEffects:', sideEffects)
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
-        const octokit = new Octokit(process.env.GITHUB_TOKEN)
-        console.log('created octokit')
+        const octokit = new Octokit()
+        console.log('created octokit:', octokit)
 
         const options = {
           ...github.context.repo,
@@ -171,7 +169,6 @@ export default configure({
             })
           } catch (error) {
             console.error(JSON.stringify(error, undefined, 2))
-            throw error
           }
         } else {
           try {
@@ -198,7 +195,6 @@ export default configure({
             })
           } catch (error) {
             console.error(JSON.stringify(error, undefined, 2))
-            throw error
           }
         }
       },
