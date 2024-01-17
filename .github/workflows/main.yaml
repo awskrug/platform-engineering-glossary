@@ -8,6 +8,7 @@ jobs:
   main:
     permissions:
       contents: write # Let the bot push to main
+      issues: write
       pull-requests: write # Let the bot comment on PR
 
     runs-on: ubuntu-latest
@@ -72,4 +73,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           JJANGGA0214_DEVTO_API_KEY: ${{ secrets.JJANGGA0214_DEVTO_API_KEY }}
-          TMP0200_DEVTO_API_KEY: ${{ secrets.TMP0200_DEVTO_API_KEY }}
