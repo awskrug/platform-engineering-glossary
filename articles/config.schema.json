@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "Publish config",
+  "description": "Config for publishing translated articles with glossary",
+  "type": "object",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(jjangga0214|Ryu-Hanjin|sudosubin|milkyKim|Eeap|kmus1232|Han-Joon-Hyeok|da-head0|pinetree2|Geun-Oh)$": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "dev.to": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["apiKey"],
+          "properties": {
+            "apiKey": {
+              "type": "string",
+              "description": "A name of environment variable for the author's dev.to API key",
+              "title": "API Key Env Var"
+            }
+          }
+        }
+      }
+    }
+  }
+}
