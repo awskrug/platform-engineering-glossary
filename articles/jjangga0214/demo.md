@@ -8,6 +8,7 @@ published: true
 organization_id: 8203
 ci: true
 slug: about-platforms
+id: 1732681
 ---
 
 # {{ platform engineering }} 을 소개합니다.
