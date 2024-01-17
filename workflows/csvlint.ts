@@ -1,6 +1,6 @@
 /* eslint-disable unicorn/no-process-exit */
-import path from 'node:path'
 import fs from 'node:fs/promises'
+import path from 'upath'
 import { dirname, filename } from 'dirname-filename-esm'
 import chalk from 'chalk-template'
 

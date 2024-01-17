@@ -9,7 +9,7 @@ export default [
   ...typescript,
   ...jest,
   {
-    files: ['workflows/**/*.{c,m,}{j,t}s{x,}'],
+    files: ['workflows/**/*.{c,m,}{j,t}s{x,}', '**/haetae.config.{c,m,}{j,t}s'],
     rules: {
       'import/no-extraneous-dependencies': 'off',
     },
