@@ -3,5 +3,8 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "editor.renderFinalNewline": "on",
-  "eslint.experimental.useFlatConfig": true
+  "eslint.experimental.useFlatConfig": true,
+  "yaml.schemas": {
+    "articles/config.schema.json": "config.yaml",
+  },
 }
