@@ -138,6 +138,7 @@ export default configure({
         if (github.context.ref === 'refs/heads/main') {
           return
         }
+        console.log('affectedArticles:', affectedArticles)
 
         // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         const changedFiles = (await git.changedFiles({
@@ -145,44 +146,56 @@ export default configure({
           // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
           from: github.context.payload.pull_request!.base.sha as string,
         })) as string[]
+        console.log('changedFiles:', changedFiles)
 
         const sideEffects = affectedArticles
           .map((f) => toOriginalFilename(f))
           .filter((file) => !changedFiles.includes(file))
+        console.log('sideEffects:', sideEffects)
         const octokit = new Octokit()
-        const branch = await git.branch()
+        console.log('created octokit:', octokit)
+
         const options = {
           ...github.context.repo,
           issue_number: github.context.payload.pull_request!.number,
         }
-        // eslint-disable-next-line unicorn/prefer-ternary
-        if (sideEffects.length === 0) {
-          await octokit.issues.createComment({
-            ...options,
-            body: `✅ 사이드 이펙트가 감지되지 않았습니다.
-*(PR 에 포함되지 않은 파일들의 렌더링에 영향이 없습니다.)*`,
-          })
-        } else {
-          await octokit.issues.createComment({
-            ...options,
-            body: `⚠️ 사이드 이펙트가 감지되었습니다.
-아래의 파일들은 PR 에 포함되지 않지만 렌더링에 영향을 받습니다.
 
-${affectedArticles
-  .map((f) => toOriginalFilename(f))
-  .map((f) => f.replace(dirname(import.meta), ''))
-  .map((f) => (f.startsWith('/') ? f.slice(1) : f))
-  .map(
-    (f) =>
-      `- *[\`${f}\`](${path.join(
-        github.context.payload.repository?.html_url,
-        'blob',
-        branch,
-        f,
-      )})*`,
-  )
-  .join('\n')}`,
-          })
+        if (sideEffects.length === 0) {
+          try {
+            await octokit.issues.createComment({
+              ...options,
+              body: `✅ 사이드 이펙트가 감지되지 않았습니다.
+  *(PR 에 포함되지 않은 파일들의 렌더링에 영향이 없습니다.)*`,
+            })
+          } catch (error) {
+            console.error(JSON.stringify(error, undefined, 2))
+          }
+        } else {
+          try {
+            const branch = await git.branch()
+            await octokit.issues.createComment({
+              ...options,
+              body: `⚠️ 사이드 이펙트가 감지되었습니다.
+  아래의 파일들은 PR 에 포함되지 않지만 렌더링에 영향을 받습니다.
+
+  ${affectedArticles
+    .map((f) => toOriginalFilename(f))
+    .map((f) => f.replace(dirname(import.meta), ''))
+    .map((f) => (f.startsWith('/') ? f.slice(1) : f))
+    .map(
+      (f) =>
+        `- *[\`${f}\`](${path.join(
+          github.context.payload.repository?.html_url,
+          'blob',
+          branch,
+          f,
+        )})*`,
+    )
+    .join('\n')}`,
+            })
+          } catch (error) {
+            console.error(JSON.stringify(error, undefined, 2))
+          }
         }
       },
     },

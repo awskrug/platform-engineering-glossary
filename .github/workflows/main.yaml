@@ -6,10 +6,7 @@ on:
 
 jobs:
   main:
-    permissions:
-      contents: write # Let the bot push to main
-      issues: write
-      pull-requests: write # Let the bot comment on PR
+    permissions: write-all
 
     runs-on: ubuntu-latest
 
