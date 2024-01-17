@@ -228,3 +228,9 @@ bob:
     BOB_DEVTO_API_KEY: ${{ secrets.BOB_DEVTO_API_KEY }}
     # ...
 ```
+
+dev.to 의 org 에 배포하려면, 배포 전에 먼저 조인해야 합니다.
+org 운영자에게 연락하여 Secret Code 를 받아 가입할 수 있습니다.
+[Platform Engineering Korea](https://dev.to/platform-engineering-korea) 는 [@jjangga0214](https://github.com/jjangga0214) 가 관리하고 있습니다.
+
+![dev.to org 조인](./docs/images/devto-join-org.png)
