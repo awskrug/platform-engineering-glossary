@@ -181,6 +181,8 @@ id: 1732255
 
 `organization_id` 와 `slug` 를 제외하면 퍼블리시 후라도 언제든 Frontmatter 의 수정으로 변경 반영이 가능합니다.
 
+참고로 dev.to 는 트위터, 유튜브 등 임베딩(`{% embed https://... %}`)도 지원하고, 그 외에도 다양한 기능들은 [Editor Guide](https://dev.to/p/editor_guide) 에서 찾아볼 수 있습니다.
+
 dev.to 에 배포한 예시는 다음과 같습니다.
 
 ![Frontmatter 반영 예시](./docs/images/devto-frontmatter.png)
