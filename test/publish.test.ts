@@ -3,6 +3,7 @@ import {
   extractFrontMatter,
   extractRawFrontMatter,
   setFrontMatter,
+  setPublished,
 } from '../workflows/publish.js'
 
 describe('extractRawFrontMatter', () => {
@@ -184,7 +185,7 @@ slug: about-platform-engineering
 })
 
 describe('insertId', () => {
-  test('when id already exists', async () => {
+  test('when `id` already exists', async () => {
     await expect(
       insertId({
         id: 1234,
@@ -199,7 +200,7 @@ id: 4321
     ).rejects.toThrow('id already exists.')
   })
 
-  test('when frontmatter does not exist', async () => {
+  test('when Frontmatter does not exist', async () => {
     await expect(
       insertId({
         id: 1234,
@@ -208,11 +209,12 @@ id: 4321
     ).rejects.toThrow('Frontmatter does not exist.')
   })
 
-  test('when id does not exist', async () => {
+  test('when `id` does not exist', async () => {
     await expect(
       insertId({
         id: 1234,
         content: `---
+# comment
 title: platform engineering
 ---
 
@@ -220,6 +222,7 @@ title: platform engineering
 `,
       }),
     ).resolves.toBe(`---
+# comment
 title: platform engineering
 id: 1234
 ---
@@ -233,6 +236,7 @@ id: 1234
       insertId({
         id: 1234,
         content: `---
+# comment
 title: {{ platform engineering }}
 ---
 
@@ -240,11 +244,103 @@ title: {{ platform engineering }}
 `,
       }),
     ).resolves.toBe(`---
+# comment
 title: {{ platform engineering }}
 id: 1234
 ---
 
 # Platform Enginering
+`)
+  })
+})
+
+describe('setPublished', () => {
+  test('when `published` exists', async () => {
+    await expect(
+      setPublished({
+        published: true,
+        content: `---
+# comment
+title: platform engineering
+published: true
+---
+
+# Platform Enginering
+`,
+      }),
+    ).resolves.toBe(`---
+# comment
+title: platform engineering
+published: true
+---
+
+# Platform Enginering
+`)
+    await expect(
+      setPublished({
+        published: false,
+        content: `---
+# comment
+title: platform engineering
+published: true
+---
+
+# Platform Enginering
+`,
+      }),
+    ).resolves.toBe(`---
+# comment
+title: platform engineering
+published: false
+---
+
+# Platform Enginering
+`)
+  })
+
+  test('when Frontmatter does not exist', async () => {
+    await expect(
+      setPublished({
+        published: true,
+        content: '# Platform Enginering',
+      }),
+    ).rejects.toThrow('Frontmatter does not exist.')
+  })
+
+  test('when `published` does not exist', async () => {
+    await expect(
+      setPublished({
+        published: true,
+        content: `---
+title: platform engineering
+---
+
+# Platform Enginering
+`,
+      }),
+    ).rejects.toThrow('`published` should exist in Frontmatter.')
+  })
+
+  test('with mustache template', async () => {
+    await expect(
+      setPublished({
+        published: true,
+        content: `---
+# comment
+title: {{ platform engineering }}
+published: false
+---
+
+# {{ platform engineering }}에 대해
+`,
+      }),
+    ).resolves.toBe(`---
+# comment
+title: {{ platform engineering }}
+published: true
+---
+
+# {{ platform engineering }}에 대해
 `)
   })
 })

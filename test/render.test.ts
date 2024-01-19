@@ -39,7 +39,13 @@ describe('toOriginalFilename', () => {
     )
   })
 
-  test('multiple occurence of ".rendered"', () => {
+  test('idempotence', () => {
+    expect(
+      toOriginalFilename(toOriginalFilename('/path/to/foo.rendered.md')),
+    ).toBe(toOriginalFilename('/path/to/foo.md'))
+  })
+
+  test('position of ".rendered"', () => {
     expect(toOriginalFilename('/path/to/foo.rendered.bar.rendered.md')).toBe(
       '/path/to/foo.rendered.bar.md',
     )

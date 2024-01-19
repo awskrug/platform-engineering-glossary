@@ -40,6 +40,7 @@
   "prettier": "@jjangga0214/prettier-config",
   "devDependencies": {
     "@actions/github": "^6.0.0",
+    "@haetae/common": "^0.0.5",
     "@jjangga0214/eslint-config": "^5.1.0",
     "@jjangga0214/jest-config": "^5.2.0",
     "@jjangga0214/markdownlint-config": "^1.1.0",

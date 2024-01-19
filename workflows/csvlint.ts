@@ -60,9 +60,7 @@ export function run(
 if (process.argv[1] === filename(import.meta)) {
   const content = await fs.readFile(
     path.resolve(dirname(import.meta), '../glossary.csv'),
-    {
-      encoding: 'utf8',
-    },
+    'utf8',
   )
 
   const isValid = run(content)

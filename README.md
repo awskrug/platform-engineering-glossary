@@ -161,7 +161,6 @@ slug: about-platforms
 # 시리즈에 넣지 않을 글은 series 를 삭제(또는 주석처리)해 주세요.
 series: AWSKRUG
 
-
 # 퍼블리시된 글의 id 입니다.
 # CI 에서 배포되었다면 post-publish 과정이
 # id 를 Frontmatter 에 적어 commit 해 줍니다.
