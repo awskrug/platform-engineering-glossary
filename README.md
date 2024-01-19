@@ -104,7 +104,7 @@ pnpm dev
 파일시스템의 구조는 앞서 설명한 렌더링 예시와 같습니다.<br/>
 그 중, 마크다운 파일(*`articles/*/**.md`*)에 한해 배포가 이루어집니다.
 
-우선, 마크다운 파일 상단에 `---` 와 `---` 사이에 다음과 같이 Frontmatter 를 작성할 수 있습니다.
+우선, 마크다운 파일 상단의 `---` 와 `---` 사이에 다음과 같이 Frontmatter 를 작성할 수 있습니다.
 
 ```md
 ---
@@ -161,11 +161,10 @@ slug: about-platforms
 # 시리즈에 넣지 않을 글은 series 를 삭제(또는 주석처리)해 주세요.
 series: AWSKRUG
 
-
 # 퍼블리시된 글의 id 입니다.
-# CI 에서 배포되었다면 자동으로 post-publish 과정으로
+# CI 에서 배포되었다면 post-publish 과정이
 # id 를 Frontmatter 에 적어 commit 해 줍니다.
-# 따라서 직접 신경 쓸 필요는 없습니다.
+# 따라서 작성자가 직접 신경 쓸 필요는 없습니다.
 id: 1732255
 
 # 아래 부터는 Frontmatter 밖입니다.
@@ -180,6 +179,8 @@ id: 1732255
 ```
 
 `organization_id` 와 `slug` 를 제외하면 퍼블리시 후라도 언제든 Frontmatter 의 수정으로 변경 반영이 가능합니다.
+
+참고로 dev.to 는 트위터, 유튜브 등 임베딩(`{% embed https://... %}`)도 지원하고, 그 외에도 다양한 기능들은 [Editor Guide](https://dev.to/p/editor_guide) 에서 찾아볼 수 있습니다.
 
 dev.to 에 배포한 예시는 다음과 같습니다.
 

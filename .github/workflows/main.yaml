@@ -19,6 +19,14 @@ jobs:
         with:
           fetch-depth: 0 # For haetae
 
+      - name: Checkout PR into branch
+        if: ${{ github.event_name == 'pull_request' }}
+        # On GitHub Actions, PR and tag are not to be checked out into a branch, but "detached HEAD".
+        # Only push is checked out into a branch.
+        # This check out the PR into a branch.
+        run: |
+          git checkout ${GITHUB_HEAD_REF#refs/heads/} || git checkout -b ${GITHUB_HEAD_REF#refs/heads/} && git pull
+
       - name: Set up pnpm
         uses: pnpm/action-setup@v2
         with:
@@ -58,14 +66,8 @@ jobs:
             main-haetae-${{ github.ref }}-
             main-haetae-
 
-      - name: haetae comment
-        if: github.ref == 'refs/heads/main' || github.event_name == 'pull_request'
-        run: pnpm haetae comment
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: haetae publish
-        if: github.ref == 'refs/heads/main' # Only for push to main, not PR
+        if: github.ref == 'refs/heads/main' || github.event_name == 'pull_request'
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
@@ -73,3 +75,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           JJANGGA0214_DEVTO_API_KEY: ${{ secrets.JJANGGA0214_DEVTO_API_KEY }}
+          TMP0200_DEVTO_API_KEY: ${{ secrets.TMP0200_DEVTO_API_KEY }}

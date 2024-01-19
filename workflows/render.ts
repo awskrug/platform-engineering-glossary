@@ -64,7 +64,7 @@ export async function render({
 }: RenderOptions): Promise<string> {
   // eslint-disable-next-line no-param-reassign
   glossary = glossary || (await parseGlossary())
-  const content = await fs.readFile(filename, { encoding: 'utf8' })
+  const content = await fs.readFile(filename, 'utf8')
   const renderedContent = mustache.render(content, glossary)
   await fs.writeFile(toRenderedFilename(filename), renderedContent, 'utf8')
   return renderedContent
