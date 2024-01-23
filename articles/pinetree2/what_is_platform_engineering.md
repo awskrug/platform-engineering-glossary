@@ -5,7 +5,7 @@ title: "[Gartner] 플랫폼 엔지니어링이란 무엇인가?"
 description: {{ platform engineering }} 에 대한 개념 소개
 tags: platformengineering,platform
 cover_image: https://emt.gartnerweb.com/ngw/globalassets/en/articles/images/diagram-of-platform-engineering.png?_gl=1*c8foib*_ga*NDMyMzYzMDI3LjE3MDUyNDU1MjM.*_ga_R1W5CE5FEV*MTcwNTg4Mjk4My40LjEuMTcwNTg4Mjk5Ny40Ni4wLjA.
-published: true
+published: false
 organization_id: 8203
 ci: true
 slug: about-platforms
