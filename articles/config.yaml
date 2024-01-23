@@ -1,3 +1,7 @@
 jjangga0214:
   dev.to:
     apiKey: JJANGGA0214_DEVTO_API_KEY
+
+pinetree2:
+  dev.to:
+    apiKey: PINETREE2_DEVTO_API_KEY

@@ -76,3 +76,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           JJANGGA0214_DEVTO_API_KEY: ${{ secrets.JJANGGA0214_DEVTO_API_KEY }}
           TMP0200_DEVTO_API_KEY: ${{ secrets.TMP0200_DEVTO_API_KEY }}
+          PINETREE2_DEVTO_API_KEY: ${{ secrets.PINETREE2_DEVTO_API_KEY }}
