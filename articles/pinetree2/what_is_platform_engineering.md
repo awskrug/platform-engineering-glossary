@@ -11,6 +11,7 @@ ci: true
 slug: about-platforms
 series: AWSKRUG
 
+id: 1738426
 ---
 
 # [Gartner] {{ platform engineering }} 이란 무엇인가?
