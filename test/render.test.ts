@@ -8,11 +8,11 @@ describe('parseGlossary', () => {
   test('parseGlossary', async () => {
     await expect(
       parseGlossary(`en,ko
-platform engineering,플랫폼 엔지니어링
+Platform Engineering,플랫폼 엔지니어링
 internal developer portal,내부 개발자 포탈
 `),
     ).resolves.toStrictEqual({
-      'platform engineering': '플랫폼 엔지니어링',
+      'Platform Engineering': '플랫폼 엔지니어링',
       'internal developer portal': '내부 개발자 포탈',
     })
   })
