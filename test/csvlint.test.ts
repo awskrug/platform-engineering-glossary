@@ -9,8 +9,8 @@ describe('rules', () => {
     expect(
       run(`
 en,ko
-platform,플랫폼
-engineering,엔지니어링`),
+Platform Engineering,플랫폼 엔지니어링
+Internal Developer Platform,내부 개발자 플랫폼`),
     ).toBe(true)
   })
 
@@ -18,8 +18,8 @@ engineering,엔지니어링`),
     expect(
       run(`
 en,kor
-platform,플랫폼
-engineering,엔지니어링`),
+Platform Engineering,플랫폼 엔지니어링
+Internal Developer Platform,내부 개발자 플랫폼`),
     ).toBe(false)
   })
 
@@ -27,15 +27,15 @@ engineering,엔지니어링`),
     expect(
       run(`
 en,ko
-platform, 플랫폼
-engineering,엔지니어링`),
+Platform Engineering ,플랫폼 엔지니어링
+Internal Developer Platform,내부 개발자 플랫폼`),
     ).toBe(false)
 
     expect(
       run(`
 en,ko
-platform,플랫폼
- engineering,엔지니어링`),
+Platform Engineering,플랫폼 엔지니어링
+ Internal Developer Platform,내부 개발자 플랫폼`),
     ).toBe(false)
   })
 
@@ -43,15 +43,15 @@ platform,플랫폼
     expect(
       run(`
 en,ko
-platform ,플랫폼
-engineering,엔지니어링`),
+Platform Engineering ,플랫폼 엔지니어링
+Internal Developer Platform,내부 개발자 플랫폼`),
     ).toBe(false)
 
     expect(
       run(`
-en,kor
-platform,플랫폼
-engineering,엔지니어링 `),
+en,ko
+Platform Engineering,플랫폼 엔지니어링
+Internal Developer Platform,내부 개발자 플랫폼 `),
     ).toBe(false)
   })
 
@@ -59,15 +59,15 @@ engineering,엔지니어링 `),
     expect(
       run(`
 en,ko,foo
-platform,플랫폼
-engineering,엔지니어링`),
+Platform Engineering,플랫폼 엔지니어링
+Internal Developer Platform,내부 개발자 플랫폼`),
     ).toBe(false)
 
     expect(
       run(`
-en,kor
-platform,플랫폼,
-engineering,엔지니어링`),
+en,ko
+Platform Engineering,플랫폼 엔지니어링,
+Internal Developer Platform,내부 개발자 플랫폼`),
     ).toBe(false)
   })
 })

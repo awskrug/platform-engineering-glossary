@@ -10,7 +10,7 @@ describe('extractRawFrontMatter', () => {
   test('when frontmatter exists', () => {
     expect(
       extractRawFrontMatter(`---
-title: platform engineering
+title: Platform Engineering
 tags: platformengineering,idp
 ci: false
 platform: dev.to
@@ -19,7 +19,7 @@ id: 1234
 
 # Platform Enginering
 `),
-    ).toBe(`title: platform engineering
+    ).toBe(`title: Platform Engineering
 tags: platformengineering,idp
 ci: false
 platform: dev.to
@@ -29,7 +29,7 @@ id: 1234
     expect(
       extractRawFrontMatter(`
 ---
-title: platform engineering
+title: Platform Engineering
 tags: platformengineering,idp
 ci: false
 platform: dev.to
@@ -38,7 +38,7 @@ id: 1234
 
 # Platform Enginering
 `),
-    ).toBe(`title: platform engineering
+    ).toBe(`title: Platform Engineering
 tags: platformengineering,idp
 ci: false
 platform: dev.to
@@ -50,14 +50,14 @@ id: 1234
     expect(extractRawFrontMatter(`# Platform Enginering`)).toBeUndefined()
     expect(
       extractRawFrontMatter(`---
-title: platform engineering
+title: Platform Engineering
 
 # Platform Enginering
 `),
     ).toBeUndefined()
 
     expect(
-      extractRawFrontMatter(`title: platform engineering
+      extractRawFrontMatter(`title: Platform Engineering
 ---
 
 # Platform Enginering
@@ -77,7 +77,7 @@ describe('extractFrontMatter', () => {
   test('when frontmatter exists', () => {
     expect(
       extractFrontMatter(`---
-title: platform engineering
+title: Platform Engineering
 tags: platformengineering,idp
 ci: false
 platform: dev.to
@@ -87,7 +87,7 @@ id: 1234
 # Platform Enginering
 `),
     ).toStrictEqual({
-      title: 'platform engineering',
+      title: 'Platform Engineering',
       tags: 'platformengineering,idp',
       ci: false,
       platform: 'dev.to',
@@ -97,7 +97,7 @@ id: 1234
     expect(
       extractFrontMatter(`
 ---
-title: platform engineering
+title: Platform Engineering
 tags: platformengineering,idp
 ci: false
 platform: dev.to
@@ -107,7 +107,7 @@ id: 1234
 # Platform Enginering
 `),
     ).toStrictEqual({
-      title: 'platform engineering',
+      title: 'Platform Engineering',
       tags: 'platformengineering,idp',
       ci: false,
       platform: 'dev.to',
@@ -119,13 +119,13 @@ id: 1234
     expect(extractFrontMatter(`# Platform Enginering`)).toBeUndefined()
     expect(
       extractFrontMatter(`---
-title: platform engineering
+title: Platform Engineering
 
 # Platform Enginering
 `),
     ).toBeUndefined()
     expect(
-      extractFrontMatter(`title: platform engineering
+      extractFrontMatter(`title: Platform Engineering
 ---
 
 # Platform Enginering
@@ -154,13 +154,13 @@ describe('setFrontMatter', () => {
     expect(
       setFrontMatter({
         frontMatter: {
-          title: 'platform engineering!!!!!!',
+          title: 'Platform Engineering!!!!!!',
           ci: true,
           tags: 'idp,platformengineering',
           slug: 'about-platform-engineering',
         },
         content: `---
-title: platform engineering
+title: Platform Engineering
 tags: platformengineering,idp
 ci: false
 platform: dev.to
@@ -171,7 +171,7 @@ id: 1234
 `,
       }),
     ).toBe(`---
-title: platform engineering!!!!!!
+title: Platform Engineering!!!!!!
 tags: idp,platformengineering
 ci: true
 platform: dev.to
@@ -190,7 +190,7 @@ describe('insertId', () => {
       insertId({
         id: 1234,
         content: `---
-title: platform engineering
+title: Platform Engineering
 id: 4321
 ---
 
@@ -215,7 +215,7 @@ id: 4321
         id: 1234,
         content: `---
 # comment
-title: platform engineering
+title: Platform Engineering
 ---
 
 # Platform Enginering
@@ -223,7 +223,7 @@ title: platform engineering
       }),
     ).resolves.toBe(`---
 # comment
-title: platform engineering
+title: Platform Engineering
 id: 1234
 ---
 
@@ -237,7 +237,7 @@ id: 1234
         id: 1234,
         content: `---
 # comment
-title: {{ platform engineering }}
+title: {{ Platform Engineering }}
 ---
 
 # Platform Enginering
@@ -245,7 +245,7 @@ title: {{ platform engineering }}
       }),
     ).resolves.toBe(`---
 # comment
-title: {{ platform engineering }}
+title: {{ Platform Engineering }}
 id: 1234
 ---
 
@@ -261,7 +261,7 @@ describe('setPublished', () => {
         published: true,
         content: `---
 # comment
-title: platform engineering
+title: Platform Engineering
 published: true
 ---
 
@@ -270,7 +270,7 @@ published: true
       }),
     ).resolves.toBe(`---
 # comment
-title: platform engineering
+title: Platform Engineering
 published: true
 ---
 
@@ -281,7 +281,7 @@ published: true
         published: false,
         content: `---
 # comment
-title: platform engineering
+title: Platform Engineering
 published: true
 ---
 
@@ -290,7 +290,7 @@ published: true
       }),
     ).resolves.toBe(`---
 # comment
-title: platform engineering
+title: Platform Engineering
 published: false
 ---
 
@@ -312,7 +312,7 @@ published: false
       setPublished({
         published: true,
         content: `---
-title: platform engineering
+title: Platform Engineering
 ---
 
 # Platform Enginering
@@ -327,20 +327,20 @@ title: platform engineering
         published: true,
         content: `---
 # comment
-title: {{ platform engineering }}
+title: {{ Platform Engineering }}
 published: false
 ---
 
-# {{ platform engineering }}에 대해
+# {{ Platform Engineering }}에 대해
 `,
       }),
     ).resolves.toBe(`---
 # comment
-title: {{ platform engineering }}
+title: {{ Platform Engineering }}
 published: true
 ---
 
-# {{ platform engineering }}에 대해
+# {{ Platform Engineering }}에 대해
 `)
   })
 })
