@@ -13,7 +13,7 @@ series: AWSKRUG
 id: 1738426
 ---
 
-# [Gartner] {{ Platform Engineering }} 이란 무엇인가?
+# [Gartner] {{ Platform Engineering }}이란 무엇인가?
 
 {{ Platform Engineering }}은 애플리케이션의 제공속도를 가속화하고 비즈니스 가치를 빠르게 창출할 수 있는 새로운 기술적 접근 방식입니다.
 플랫폼 엔지니어링은 자동화된 인프라 운영과 함께 셀프 서비스 기능을 제공하여 개발자 경험과 생산성을 향상시킵니다. 개발자 경험을 최적화하고, product 팀이 고객 가치를 빠르게 전달할 수 있다는 점에서 {{ Platform Engineering }} 이 트렌드로 자리잡고 있습니다.
@@ -31,7 +31,7 @@ id: 1738426
 
 ---
 
-# {{ Platform Engineering }} 의 작동 방식
+# {{ Platform Engineering }}의 작동 방식
 
 {{ Platform Engineering }}은 특히 디지털 트랜스포메이션을 위해 엔터프라이즈 소프트웨어 제공을 현대화하기 위한 새로운 트렌드입니다. 전담 제품 팀이 엔지니어링 플랫폼을 만들고 유지 보수하며, 재사용 가능한 도구와 기능을 제공하고 복잡한 인프라와의 인터페이스를 통해 소프트웨어 개발자와 기타 사용자들의 요구를 지원하도록 설계되었습니다.
 
@@ -45,7 +45,7 @@ id: 1738426
 ![영상 썸네일](https://i.imgur.com/BmXgfIt.png)
 > [영상 링크](https://www.youtube.com/watch?embeds_referring_euri=https%3A%2F%2Fwww.gartner.com%2F&embeds_referring_origin=https%3A%2F%2Fwww.gartner.com&source_ve_path=MzY4NDIsMjg2NjQsMTY0NTAz&feature=emb_share&v=Lq-G2GyLsFk)
 
-# {{ Platform Engineering }} 이 사용되는 용도
+# {{ Platform Engineering }}이 사용되는 용도
 
 한 회사에 이상적인 개발 플랫폼이 다른 회사에는 쓸모가 없을 수도 있습니다. 심지어 같은 회사 내에서도 개발팀마다 요구 사항이 완전히 다를 수 있습니다.
 
