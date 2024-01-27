@@ -23,11 +23,11 @@ export function run(
   const results: boolean[] = []
 
   for (const [index, lineContent] of content
-    .trim()
+    .replace(/\n$/, '') // rm trailing newline
     .split(separator)
     .entries()) {
     const line = index + 1
-    const render = (message: string): string =>
+    const msg = (message: string): string =>
       chalk`{inverse.italic  line ${line} } ${message}: {red ${lineContent}}`
     const [en, ko, ...rest] = lineContent.split(',')
 
@@ -35,21 +35,21 @@ export function run(
       results.push(
         validate(
           en === 'en' && ko === 'ko',
-          render(chalk`Invalid titles. They should be {bold en,ko}`),
+          msg(chalk`Invalid titles. They should be {bold en,ko}`),
         ),
       )
     }
 
     results.push(
-      validate(rest.length === 0, render('Too many columns')),
+      validate(rest.length === 0, msg('Too many columns')),
       validate(
-        en.trimStart().length === en.length &&
-          ko.trimStart().length === ko.length,
-        render('Target has a preceding whitespace'),
+        en.length === en.trimStart().length &&
+          ko.length === ko.trimStart().length,
+        msg('Target has a preceding whitespace'),
       ),
       validate(
-        en.trimEnd().length === en.length && ko.trimEnd().length === ko.length,
-        render('Target has a trailing whitespace'),
+        en.length === en.trimEnd().length && ko.length === ko.trimEnd().length,
+        msg('Target has a trailing whitespace'),
       ),
     )
   }

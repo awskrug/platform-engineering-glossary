@@ -43,7 +43,7 @@ platform-engineering-glossary
 
 ```csv
 en,ko
-platform engineering,플랫폼 엔지니어링
+Platform Engineering,플랫폼 엔지니어링
 --- 이하 생략 ---
 ```
 
@@ -52,9 +52,9 @@ platform engineering,플랫폼 엔지니어링
 아티클은 [Mustache](https://mustache.github.io) spec 으로 templating 합니다.
 
 ```md
-# {{ platform engineering }} 을 소개합니다.
+# {{ Platform Engineering }} 을 소개합니다.
 
-{{ platform engineering }}에 대해 다루어볼까요?
+{{ Platform Engineering }}에 대해 다루어볼까요?
 ```
 
 다음 실행시,
@@ -119,7 +119,7 @@ platform: dev.to
 title: 내가 플랫폼에 대해 말할 때 짚는 것들
 
 # UI 에서 시작적으로 보이지 않는 메타 정보로서의 설명문입니다.
-description: {{ platform engineering }} 과 관련해 효과적인 디지털 플랫폼이 제공 규모를 확장하는 데 도움이 되는 이유, 플랫폼에 포함되어야 하는 내용, 플랫폼 구축을 시작하는 방법.
+description: {{ Platform Engineering }} 과 관련해 효과적인 디지털 플랫폼이 제공 규모를 확장하는 데 도움이 되는 이유, 플랫폼에 포함되어야 하는 내용, 플랫폼 구축을 시작하는 방법.
 
 # comma-separated values 형식의 태그입니다.
 # Lowercase 와 숫자만 지원합니다.
@@ -173,9 +173,9 @@ id: 1732255
 # templating 된 경우, 렌더링 된 내용으로 배포됩니다.
 ---
 
-# {{ platform engineering }} 을 소개합니다.
+# {{ Platform Engineering }} 을 소개합니다.
 
-{{ platform engineering }}에 대해 다루어볼까요?
+{{ Platform Engineering }}에 대해 다루어볼까요?
 ```
 
 `organization_id` 와 `slug` 를 제외하면 퍼블리시 후라도 언제든 Frontmatter 의 수정으로 변경 반영이 가능합니다.

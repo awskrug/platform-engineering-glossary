@@ -11,8 +11,8 @@ slug: about-platforms
 id: 1732681
 ---
 
-# {{ platform engineering }}을 소개합니다
+# {{ Platform Engineering }}을 소개합니다
 
-{{ platform engineering }}에 대해 다루어볼까요?
+{{ Platform Engineering }}에 대해 다루어볼까요?
 
 감사합니다~!
