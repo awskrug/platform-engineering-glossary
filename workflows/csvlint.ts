@@ -30,6 +30,14 @@ export function run(
     const msg = (message: string): string =>
       chalk`{inverse.italic  line ${line} } ${message}: {red ${lineContent}}`
     const [en, ko, ...rest] = lineContent.split(',')
+    if (en === undefined) {
+      results.push(validate(false, msg('Empty line')))
+      continue
+    }
+    if (ko === undefined) {
+      results.push(validate(false, msg('Korean is missing')))
+      continue
+    }
 
     if (index === 0) {
       results.push(
