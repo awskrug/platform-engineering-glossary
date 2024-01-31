@@ -8,6 +8,7 @@ organization_id: 8203
 ci: true
 slug: talk-about-platforms
 platform: dev.to
+id: 1746685
 ---
 
 *이 글은 martinfowler.com 의 [***What I Talk About When I Talk About Platforms***](https://martinfowler.com/articles/talk-about-platforms.html) 을 번역한 것입니다.*
