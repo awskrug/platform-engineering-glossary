@@ -71,7 +71,7 @@ id: 1746685
 
 일반적으로 디지털 팀을 괴롭히는 세 가지 주요 영역이 있죠. 굼뜨게 움직이는 핵심 트랜잭션 기록 시스템, 고품질 데이터 및 분석에 대한 액세스, 공유 인프라 및 운영입니다.
 
-저는 '{{ Backlog Coupling }}(Backlog Coupling)'이라는 용어를 사용합니다. 여기서 백로그는 {{ Agile }}(Agile) 전달(Delivery) 팀에서 자주 사용하는 계획 도구입니다.
+저는 '{{ Backlog Coupling }}(Backlog Coupling)'이라는 용어를 사용합니다. 여기서 백로그는 {{ Agile }}(Agile) 딜리버리(Delivery) 팀에서 자주 사용하는 계획 도구입니다.
 
 ![그림 3](https://martinfowler.com/articles/talk-about-platforms/backlog-coupling.png)
 
