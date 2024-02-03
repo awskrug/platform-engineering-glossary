@@ -5,7 +5,7 @@
   "type": "object",
   "additionalProperties": false,
   "patternProperties": {
-    "^(jjangga0214|Ryu-Hanjin|sudosubin|milkyKim|Eeap|kmus1232|Han-Joon-Hyeok|da-head0|pinetree2|Geun-Oh)$": {
+    "^(jjangga0214|Ryu-Hanjin|sudosubin|milkyKim|Eeap|kmus1232|Han-Joon-Hyeok|da-head0|pinetree2|Geun-Oh|contributions)$": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
