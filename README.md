@@ -123,6 +123,7 @@ description: {{ Platform Engineering }}과 관련해 효과적인 디지털 플�
 
 # comma-separated values 형식의 태그입니다.
 # Lowercase 와 숫자만 지원합니다.
+# 최대 4개의 태그만 가능합니다.
 tags: platformengineering,platform
 
 # 글의 커버이미지입니다.
@@ -185,6 +186,28 @@ id: 1732255
 dev.to 에 배포한 예시는 다음과 같습니다.
 
 ![Frontmatter 반영 예시](./docs/images/devto-frontmatter.png)
+
+### 작성한 글을 기여하시는 경우 (Contributor)
+
+해외의 글이나 영상을 번역하거나, 또는 직접 작성한 컨텐츠를 기여해주시는 것을 환영합니다!
+
+다음과 같이 *`articles/contributions`* 디렉토리에 작성하여 PR을 주시면 감사하겠습니다.
+
+```diff
+  platform-engineering-glossary
+  ├── articles
+  │   └── contributions
++ │       └── new-article-foo-bar.md
+  └── glossary.csv
+```
+
+만약 작업하시다가 용어집을 추가하신다면 *`glossary.csv`* 를 동일 PR 에서 같이 편집해주시면 됩니다.
+
+아티클의 경우, PR 이 merge 되면 [Platform Engineering Korea](https://dev.to/platform-engineering-korea) 에 publish 됩니다.
+[dev.to](https://dev.to) 내에선 Contribution 전용 계정으로 배포됩니다.
+글의 내용(서두나 말미)에 기여해주신 작성자(Contributor)의 신원(GitHub 계정, LinkedIn, SNS 등)을 명시하셔도 좋습니다(권장)!
+
+### Maintainer/Collaborator 의 경우
 
 배포가 이루어지려면 처음 dev.to 에서 API Key 를 발급받어야 합니다.
 
