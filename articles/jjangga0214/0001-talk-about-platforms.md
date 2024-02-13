@@ -85,9 +85,9 @@ id: 1746685
 
 그리고 사내의 여러 팀에게 공유되는 서비스를 맡는 팀에도 과부하가 걸리죠. 그런 팀에 일하면서 여기 저기 휘둘리는 건 그리 재미있는 일이 아닙니다.
 
-최근 '{{ Scaling Agile }}'(Scaling Agile)의 전통은 이 문제를 한 가지 방식으로 해결하려고 합니다. 여러 팀에 걸쳐 우선순위를 조정하는 세레머니(Ceremony)를 도입하는 방법입니다. {{ Backlog Coupling }}(Backlog Coupling)을 생성되는대로 두지 않고, 연쇄적인 우선순위를 세부 조정하는 겁니다. 이 방법은 문제 해결에 도움이 되기는 하지만 치러야 할 대가가 있죠. 전반적으로 각 팀의 자율성과, 변화에 자체 대응하는 능력이 줄어듭니다. 저는 이것이 우리가 택해야 할 유일한 방법이라 말하고 싶지 않군요.
+최근 '{{ Scaling Agile }}'(Scaling Agile)의 전통은 이 문제를 한 가지 방식으로 해결하려고 합니다. 여러 팀에 걸쳐 우선순위를 조정하는 세레머니(Ceremony)를 도입하는 방법입니다. {{ Backlog Coupling }}을 생성되는대로 두지 않고, 연쇄적인 우선순위를 세부 조정하는 겁니다. 이 방법은 문제 해결에 도움이 되기는 하지만 치러야 할 대가가 있죠. 전반적으로 각 팀의 자율성과, 변화에 자체 대응하는 능력이 줄어듭니다. 저는 이것이 우리가 택해야 할 유일한 방법이라 말하고 싶지 않군요.
 
-따라서 좋은 '플랫폼'의 우선적인 특징은 가능한 최대로 {{ Backlog Coupling }}(Backlog Coupling)의 양을 줄이는 것이어야 해요. 플랫폼은 티켓을 제기하고 작업을 할당할 필요가 없는 서비스를 제공해야 합니다. {{ Self-Service }}(Self-Service) 는 좋은 플랫폼의 주요 특징을 정의합니다.
+따라서 좋은 '플랫폼'의 우선적인 특징은 가능한 최대로 {{ Backlog Coupling }}의 양을 줄이는 것이어야 해요. 플랫폼은 티켓을 제기하고 작업을 할당할 필요가 없는 서비스를 제공해야 합니다. {{ Self-Service }}(Self-Service) 는 좋은 플랫폼의 주요 특징을 정의합니다.
 
 플랫폼은 팀에게 {{ Self-Service }} 접근(Self-Service Access), {{ Self-Service }} 프로비저닝(Self-Service Provisioning), {{ Self-Service }} 구성(Self-Service Configuration), {{ Self-Service }} 관리(Self-Service Management), {{ Self-Service }} 운영(Self-Service Operation) 을 허용해야 합니다.
 
