@@ -9,7 +9,7 @@ pinetree2:
 Geun-Oh:
   dev.to:
     apiKey: GEUNOH_DEVTO_API_KEY
-
+    
 contributions:
   dev.to:
     apiKey: CONTRIBUTIONS_DEVTO_API_KEY
