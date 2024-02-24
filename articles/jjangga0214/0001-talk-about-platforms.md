@@ -3,7 +3,7 @@ title: 내가 플랫폼에 대해 말할 때 짚는 것들
 description: 효과적인 {{ Digital Platform }}이 제공 규모를 확장하는 데 도움이 되는 이유, 플랫폼에 포함되어야 하는 내용, 플랫폼 구축을 시작하는 방법.
 tags: platformengineering,platform,idp,thoughtworks
 cover_image: https://martinfowler.com/articles/talk-about-platforms/meta.png
-published: false
+published: true
 organization_id: 8203
 ci: true
 slug: talk-about-platforms
