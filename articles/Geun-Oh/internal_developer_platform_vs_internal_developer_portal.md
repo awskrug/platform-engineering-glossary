@@ -35,7 +35,7 @@ id: 1758825
 
 - **{{Internal Developer Portal }}**: 개발자들이 필요로 하는 도구, 자원, 문서 등을 쉽게 접근할 수 있도록 하는 사용자 친화적인 인터페이스입니다. 이는 기저에 있는 {{ Internal Developer Platform }}과 타 IT 자원들과의 상호작용을 간편하게 만들어줍니다.
 
-- **{{ Synergistic Use }}**: {{ Internal Developer Platform }} 과 {{ Internal Developer Portal }}을 함께 사용하는 것은 {{ Self-Service }} 경험을 향상시킵니다. {{ Internal Developer Portal }}이 개발자들이 {{ Internal Developer Platform }}을 효율적으로 활용할 수 있도록 하는 유연하고(streamline) 접근이 용이한 프론트엔드(front-end) 인터페이스을 제공하고, {{ Internal Developer Platform }}이 프로세스 자동화, 통합, 함수화(functionalization) 등의 핵심적인 백엔드(back-end) 동작을 제공합니다.
+- **시너지**: {{ Internal Developer Platform }} 과 {{ Internal Developer Portal }}을 함께 사용하는 것은 {{ Self-Service }} 경험을 향상시킵니다. {{ Internal Developer Portal }}이 개발자들이 {{ Internal Developer Platform }}을 효율적으로 활용할 수 있도록 하는 유연하고(streamline) 접근이 용이한 프론트엔드 인터페이스를 제공하고, {{ Internal Developer Platform }}이 프로세스 자동화, 통합, 함수화(functionalization) 등의 핵심적인 백엔드 동작을 제공합니다.
 
 ## {{ Internal Developer Platform }}이란 무엇인가?
 
@@ -43,7 +43,7 @@ id: 1758825
 
 ![Dialog of key features](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e3d90c0-e73f-4d77-94de-284bfbc09ae9_1612x410.jpeg)
 
-종합적인 도구와 서비스를 제공함으로써, {{ Internal Developer Platform }}은 개발자들이 독립적으로 애플리케이션을 구성, 배포, 관리할 수 있도록하여 효율성과 생산성을 향상시켰습니다.
+종합적인 도구와 서비스를 제공함으로써, {{ Internal Developer Platform }}은 개발자들이 독립적으로 애플리케이션을 구성, 배포, 관리할 수 있도록 하여 효율성과 생산성을 향상시켰습니다.
 
 ![Role of Internal Developer Platform](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F828b65b3-bfad-49e5-9669-cc208f116a12_2708x1148.jpeg)
 
@@ -74,7 +74,6 @@ id: 1758825
 진짜 마법은 {{ Internal Developer Platform }}과 {{ Internal Developer Portal }}이 함께 사용될 때 발생합니다. {{ Internal Developer Platform }}은 강력한 백엔드 인프라와 자동화 기능을 제공하는 반면, {{ Internal Developer Portal }}은 사용자 친화적인 프론트엔드 인터페이스을 제공합니다. 이러한 시너지 효과는 개발자들에게 {{ Self-Service }} 경험을 다음과 같은 몇 가지 방법으로 향상시킵니다.
 
 1. **간편화된 접근**: {{ Internal Developer Portal }}은 개발자들이 복잡한 기능성을 가지는 {{ Internal Developer Platform }}의 복잡함을 파헤치지 않고서도 조작하기 쉽도록 만들어줍니다.
-   다
 
 2. **향상된 생산성**: 포털을 통해 접근하는 {{ Internal Developer Platform }}의 자동화된 프로세스는 수작업을 줄이고 개발 워크플로우를 유연하게 만듭니다.
 
