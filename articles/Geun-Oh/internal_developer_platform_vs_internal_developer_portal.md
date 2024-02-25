@@ -4,7 +4,7 @@ title: {{ Internal Developer Platform }} vs {{ Internal Developer Portal }}
 description: {{ Internal Developer Platform }}과 {{ Internal Developer Portal }}의 차이와 시너지 효과.
 tags: platformengineering,platform,internaldeveloperplatform,internaldeveloperportal
 cover_image: https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F93c4c8fe-87ed-4bc2-9077-6cc57bdea089_4042x2705.png
-published: false
+published: true
 organization_id: 8203
 ci: true
 slug: internal-developer-platform-vs-internal-developer-portal
