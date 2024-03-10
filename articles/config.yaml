@@ -1,3 +1,11 @@
+contributions:
+  dev.to:
+    apiKey: CONTRIBUTIONS_DEVTO_API_KEY
+
+Geun-Oh:
+  dev.to:
+    apiKey: GEUNOH_DEVTO_API_KEY
+
 jjangga0214:
   dev.to:
     apiKey: JJANGGA0214_DEVTO_API_KEY
@@ -6,10 +14,6 @@ pinetree2:
   dev.to:
     apiKey: PINETREE2_DEVTO_API_KEY
 
-Geun-Oh:
+sudosubin:
   dev.to:
-    apiKey: GEUNOH_DEVTO_API_KEY
-
-contributions:
-  dev.to:
-    apiKey: CONTRIBUTIONS_DEVTO_API_KEY
+    apiKey: SUDOSUBIN_DEVTO_API_KEY
