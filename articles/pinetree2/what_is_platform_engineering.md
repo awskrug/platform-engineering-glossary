@@ -2,7 +2,7 @@
 platform: dev.to
 title: "[Gartner] 플랫폼 엔지니어링이란 무엇인가?"
 # UI 에서 시작적으로 보이지 않는 메타 정보로서의 설명문입니다.
-description: {{ platform engineering }} 에 대한 개념 소개
+description: {{ Platform Engineering }} 에 대한 개념 소개
 tags: platformengineering,platform
 cover_image: https://emt.gartnerweb.com/ngw/globalassets/en/articles/images/diagram-of-platform-engineering.png?_gl=1*c8foib*_ga*NDMyMzYzMDI3LjE3MDUyNDU1MjM.*_ga_R1W5CE5FEV*MTcwNTg4Mjk4My40LjEuMTcwNTg4Mjk5Ny40Ni4wLjA.
 published: false
