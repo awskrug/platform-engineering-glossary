@@ -43,7 +43,7 @@ platform-engineering-glossary
 
 ```csv
 en,ko
-platform engineering,플랫폼 엔지니어링
+Platform Engineering,플랫폼 엔지니어링
 --- 이하 생략 ---
 ```
 
@@ -52,9 +52,9 @@ platform engineering,플랫폼 엔지니어링
 아티클은 [Mustache](https://mustache.github.io) spec 으로 templating 합니다.
 
 ```md
-# {{ platform engineering }} 을 소개합니다.
+# {{ Platform Engineering }}을 소개합니다.
 
-{{ platform engineering }}에 대해 다루어볼까요?
+{{ Platform Engineering }}에 대해 다루어볼까요?
 ```
 
 다음 실행시,
@@ -119,10 +119,11 @@ platform: dev.to
 title: 내가 플랫폼에 대해 말할 때 짚는 것들
 
 # UI 에서 시작적으로 보이지 않는 메타 정보로서의 설명문입니다.
-description: {{ platform engineering }} 과 관련해 효과적인 디지털 플랫폼이 제공 규모를 확장하는 데 도움이 되는 이유, 플랫폼에 포함되어야 하는 내용, 플랫폼 구축을 시작하는 방법.
+description: {{ Platform Engineering }}과 관련해 효과적인 디지털 플랫폼이 제공 규모를 확장하는 데 도움이 되는 이유, 플랫폼에 포함되어야 하는 내용, 플랫폼 구축을 시작하는 방법.
 
 # comma-separated values 형식의 태그입니다.
 # Lowercase 와 숫자만 지원합니다.
+# 최대 4개의 태그만 가능합니다.
 tags: platformengineering,platform
 
 # 글의 커버이미지입니다.
@@ -173,9 +174,9 @@ id: 1732255
 # templating 된 경우, 렌더링 된 내용으로 배포됩니다.
 ---
 
-# {{ platform engineering }} 을 소개합니다.
+# {{ Platform Engineering }}을 소개합니다.
 
-{{ platform engineering }}에 대해 다루어볼까요?
+{{ Platform Engineering }}에 대해 다루어볼까요?
 ```
 
 `organization_id` 와 `slug` 를 제외하면 퍼블리시 후라도 언제든 Frontmatter 의 수정으로 변경 반영이 가능합니다.
@@ -185,6 +186,28 @@ id: 1732255
 dev.to 에 배포한 예시는 다음과 같습니다.
 
 ![Frontmatter 반영 예시](./docs/images/devto-frontmatter.png)
+
+### 작성한 글을 기여하시는 경우 (Contributor)
+
+해외의 글이나 영상을 번역하거나, 또는 직접 작성한 컨텐츠를 기여해주시는 것을 환영합니다!
+
+다음과 같이 *`articles/contributions`* 디렉토리에 작성하여 PR을 주시면 감사하겠습니다.
+
+```diff
+  platform-engineering-glossary
+  ├── articles
+  │   └── contributions
++ │       └── new-article-foo-bar.md
+  └── glossary.csv
+```
+
+만약 작업하시다가 용어집을 추가하신다면 *`glossary.csv`* 를 동일 PR 에서 같이 편집해주시면 됩니다.
+
+아티클의 경우, PR 이 merge 되면 [Platform Engineering Korea](https://dev.to/platform-engineering-korea) 에 publish 됩니다.
+[dev.to](https://dev.to) 내에선 Contribution 전용 계정으로 배포됩니다.
+글의 내용(서두나 말미)에 기여해주신 작성자(Contributor)의 신원(GitHub 계정, LinkedIn, SNS 등)을 명시하셔도 좋습니다(권장)!
+
+### Maintainer/Collaborator 의 경우
 
 배포가 이루어지려면 처음 dev.to 에서 API Key 를 발급받어야 합니다.
 

@@ -1,6 +1,6 @@
 import type { Rec } from '@haetae/common'
 import assert from 'node:assert/strict'
-import { $, configure, utils } from 'haetae'
+import { $, configure, utils, core } from 'haetae'
 import { extensions } from './workflows/render.js'
 import { detectSideEffects, publishArticles } from './workflows/publish.js'
 import {
@@ -10,13 +10,26 @@ import {
   prNumber,
 } from './workflows/github.js'
 
+function handleErr<A extends { store: core.StoreConnector }, R>(
+  func: (options: A) => Promise<R>,
+): (options: A) => Promise<R> {
+  return async (options: A) => {
+    try {
+      return await func(options)
+    } catch (error) {
+      console.error(error)
+      throw error
+    }
+  }
+}
+
 export default configure({
   commands: {
     publish: {
       env: () => {
         assert(isPr() || isPushToMain(), 'Only push to main or PR is allowed.')
       },
-      run: async ({ store }) => {
+      run: handleErr(async ({ store }) => {
         interface RecordData extends Rec {
           [pr: number]: {
             hasSideEffects?: boolean
@@ -89,7 +102,7 @@ export default configure({
             },
           }
         }
-      },
+      }),
     },
   },
 }) as unknown
