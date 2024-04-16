@@ -8,8 +8,7 @@ cover_image: https://emt.gartnerweb.com/ngw/globalassets/en/articles/images/diag
 published: false
 organization_id: 8203
 ci: true
-slug: about-platforms
-series: AWSKRUG
+slug: gartner-what-is-platform-engineering
 
 id: 1738426
 ---
@@ -21,7 +20,7 @@ id: 1738426
 
 또한, {{ platform engineering }}은 다양한 역할과 비즈니스 기능에 걸쳐 기술적인 업무와 지식을 공유하고 개방하는 패턴과 일치합니다. 생성형 AI는 이러한 방식으로 경쟁의 장을 평등하게 만드는 데 도움을 주었습니다.
 
-가트너의 VP 분석가인 폴 델로리는 말합니다. "{{ platform engineering }} 은 현대 소프트웨어 아키텍처의 복잡성이 증가함에 따라 등장했습니다. 오늘날에는 비전문가인 최종 사용자들도 복잡하고 난해한 서비스의 집합을 운영해야 하는 경우가 많습니다, 최종 사용자를 돕고, 그들이 수행하는 가치 있는 업무에 대한 마찰을 줄이기 위해, 선진적인 기업들은 최종 사용자와 그들이 의존하는 백엔드 서비스 사이에 위치한 운영 플랫폼을 구축하기 시작했습니다."
+가트너의 VP 분석가인 [폴 델로리](https://www.gartner.com/en/experts/paul-delory)(Paul Delory. 가트너 VP 분석가)는 말합니다. "{{ platform engineering }} 은 현대 소프트웨어 아키텍처의 복잡성이 증가함에 따라 등장했습니다. 오늘날에는 비전문가인 최종 사용자들도 복잡하고 난해한 서비스의 집합을 운영해야 하는 경우가 많습니다, 최종 사용자를 돕고, 그들이 수행하는 가치 있는 업무에 대한 마찰을 줄이기 위해, 선진적인 기업들은 최종 사용자와 그들이 의존하는 백엔드 서비스 사이에 위치한 운영 플랫폼을 구축하기 시작했습니다."
 
 2026년까지 대형 소프트웨어 엔지니어링 조직의 80%는 플랫폼 엔지니어링 팀을 내부 제공자로서 설립하여 재사용 가능한 서비스, 구성 요소 및 애플리케이션 제공을 위한 도구를 구축할 것으로 예상됩니다. {{ platform engineering }}은 궁극적으로 소프트웨어 개발자와 운영자 간의 협력 문제를 해결할 것입니다.
 
@@ -43,8 +42,7 @@ id: 1738426
 목표는 개발자와 다른 사람들이 최대한 적은 오버헤드로 가치 있는 소프트웨어를 제작할 수 있도록 적절한 기능을 제공하는 마찰 없는 셀프 서비스 개발자 환경을 제공하는 것입니다. 플랫폼은 개발자의 생산성을 높이고, 인지 부하를 줄이며, 개발팀에 필요한 모든 것을 포함하고, 팀이 선호하는 워크플로에 맞는 방식으로 제공되어야 합니다.
 새로운 세대의 도구가 개발되면서 플랫폼 엔지니어링은 DevOps 커뮤니티에서 가장 뜨거운 대화 주제 중 하나가 되었습니다. 이러한 도구들은 플랫폼을 더 쉽게 구축하고 유지 관리하는 것을 목표로 합니다.
 
-![영상 썸네일](https://i.imgur.com/BmXgfIt.png)
-> [영상 링크](https://www.youtube.com/watch?embeds_referring_euri=https%3A%2F%2Fwww.gartner.com%2F&embeds_referring_origin=https%3A%2F%2Fwww.gartner.com&source_ve_path=MzY4NDIsMjg2NjQsMTY0NTAz&feature=emb_share&v=Lq-G2GyLsFk)
+{% embed https://www.youtube.com/live/Lq-G2GyLsFk?si=IRXmmf_jetb9jSjO %}
 
 # {{ platform engineering }} 이 사용되는 용도
 
@@ -56,4 +54,4 @@ id: 1738426
 
 > 원본 글 [링크](https://www.gartner.com/en/articles/what-is-platform-engineering)
 
-번역 : @pinetree2
+번역 : [@pinetree2](https://github.com/pinetree2)
